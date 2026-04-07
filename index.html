@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KALISA — Luxury Body Oil</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">KALISA</a>
+    <ul class="nav__links">
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#ingredients">Ingredients</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="#products" class="btn btn--ghost">Shop Now</a>
+      <button class="nav__icon-btn" id="loginBtn" aria-label="Sign In" title="Sign In">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <span class="user-initial" id="userInitial"></span>
+      </button>
+      <button class="nav__icon-btn nav__cart-btn" id="cartBtn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge" hidden>0</span>
+      </button>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#benefits" class="mobile-link">Benefits</a></li>
+      <li><a href="#products" class="mobile-link">Products</a></li>
+      <li><a href="#ingredients" class="mobile-link">Ingredients</a></li>
+      <li><a href="#reviews" class="mobile-link">Reviews</a></li>
+      <li><a href="#products" class="btn btn--primary mobile-link">Shop Now</a></li>
+    </ul>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero__particles" id="particles"></div>
+    <div class="hero__content reveal">
+      <span class="hero__tag">Nourishing · Smoothing · Moisturizing</span>
+      <h1 class="hero__title">Your Skin's<br /><em>Soft Glow Secret</em></h1>
+      <p class="hero__sub">Introducing the <strong>Kalisa Soft Glow Body Oil</strong> — <br class="desktop-only" />one formula for nourished, smooth, radiant skin every day.</p>
+      <div class="hero__cta">
+        <a href="#products" class="btn btn--primary btn--large">Shop Soft Glow — $68</a>
+        <a href="#benefits" class="btn btn--outline btn--large">See Benefits</a>
+      </div>
+    </div>
+    <div class="hero__visual reveal reveal--right">
+      <div class="hero__bottle">
+        <div class="bottle-glow"></div>
+        <div class="bottle-shape">
+          <div class="bottle-liquid"></div>
+          <div class="bottle-cap"></div>
+          <div class="bottle-label">
+            <span>SOFT GLOW</span>
+            <span class="bottle-label__sub">Body Oil</span>
+          </div>
+        </div>
+        <div class="bottle-shadow"></div>
+      </div>
+      <div class="hero__drops">
+        <div class="drop drop--1"></div>
+        <div class="drop drop--2"></div>
+        <div class="drop drop--3"></div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Rosehip Oil</span><span class="dot">·</span>
+      <span>Argan Oil</span><span class="dot">·</span>
+      <span>Jojoba Oil</span><span class="dot">·</span>
+      <span>Vitamin E</span><span class="dot">·</span>
+      <span>Squalane</span><span class="dot">·</span>
+      <span>Bakuchiol</span><span class="dot">·</span>
+      <span>Sea Buckthorn</span><span class="dot">·</span>
+      <span>Marula Oil</span><span class="dot">·</span>
+      <span>Rosehip Oil</span><span class="dot">·</span>
+      <span>Argan Oil</span><span class="dot">·</span>
+      <span>Jojoba Oil</span><span class="dot">·</span>
+      <span>Vitamin E</span><span class="dot">·</span>
+      <span>Squalane</span><span class="dot">·</span>
+      <span>Bakuchiol</span><span class="dot">·</span>
+      <span>Sea Buckthorn</span><span class="dot">·</span>
+      <span>Marula Oil</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ── BENEFITS ── -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Why Soft Glow</span>
+        <h2 class="section-title">Feel the Difference<br /><em>from the First Drop</em></h2>
+      </div>
+      <div class="benefits__grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4C24 4 10 14 10 26C10 33.732 16.268 40 24 40C31.732 40 38 33.732 38 26C38 14 24 4 24 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M24 40V30M24 30C24 30 18 24 18 20M24 30C24 30 30 24 30 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Deep Hydration</h3>
+          <p>Penetrates 7 layers deep into the skin, delivering moisture where it's needed most for lasting softness.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 8C24 8 32 16 32 24C32 32 24 40 24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M24 8C24 8 16 16 16 24C16 32 24 40 24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 24H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Radiant Glow</h3>
+          <p>Light-reflective botanical actives create an instant luminosity that lasts all day without any greasy residue.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 36L20 16L24 28L28 20L36 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 40H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Anti-Aging</h3>
+          <p>Rich in antioxidants and retinol-alternative Bakuchiol to visibly reduce fine lines and improve skin elasticity.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6L28.5 16.5L40 18L32 26L34 38L24 32.5L14 38L16 26L8 18L19.5 16.5L24 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Calming Aromatherapy</h3>
+          <p>A signature blend of rose, jasmine, and sandalwood envelops you in pure tranquility with every application.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 38V20L24 10L38 20V38H28V28H20V38H10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Clean Formula</h3>
+          <p>100% natural, vegan, and cruelty-free. No parabens, sulfates, or synthetic fragrances — ever.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 44C34 44 40 36 40 28C40 18 34 10 24 4C14 10 8 18 8 28C8 36 14 44 24 44Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 28C16 28 18 32 24 34C30 32 32 28 32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>All Skin Types</h3>
+          <p>Dermatologist-tested and suitable for sensitive, dry, oily, and combination skin — perfect for the whole family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRODUCT SHOWCASE ── -->
+  <section class="showcase" id="products">
+    <div class="container">
+      <div class="showcase__inner">
+
+        <!-- ── Visual ── -->
+        <div class="showcase__visual reveal">
+          <div class="showcase__bg-glow"></div>
+          <div class="sb-bottle">
+            <div class="sb-pump-head"></div>
+            <div class="sb-pump-neck"></div>
+            <div class="sb-body">
+              <div class="sb-shimmer"></div>
+              <div class="sb-label">
+                <div class="sb-label__top">
+                  <span class="sb-label__name">SOFT GLOW</span>
+                  <span class="sb-label__type">BODY OIL</span>
+                  <div class="sb-label__line"></div>
+                  <ul class="sb-label__perks">
+                    <li>+ Nourishing</li>
+                    <li>+ Smoothing</li>
+                    <li>+ Moisturizing</li>
+                  </ul>
+                </div>
+                <div class="sb-label__brand">Kalisa</div>
+                <span class="sb-label__size">1.69 fl.oz / 50 ml</span>
+              </div>
+            </div>
+          </div>
+          <div class="showcase__float-tags">
+            <div class="float-tag float-tag--1">✓ Non-greasy</div>
+            <div class="float-tag float-tag--2">✓ Absorbs fast</div>
+            <div class="float-tag float-tag--3">★ Best Seller</div>
+          </div>
+        </div>
+
+        <!-- ── Details ── -->
+        <div class="showcase__details reveal reveal--right">
+          <span class="section-tag">Our Signature Formula</span>
+          <p class="showcase__brand-name">Kalisa</p>
+          <h2 class="showcase__title">Soft Glow<br /><em>Body Oil</em></h2>
+
+          <div class="showcase__rating">
+            <span class="showcase__stars">★★★★★</span>
+            <span class="showcase__rating-text">4.9 · <a href="#reviews">461 reviews</a></span>
+          </div>
+
+          <p class="showcase__desc">
+            The body oil that does it all. Lightweight yet intensely nourishing,
+            Soft Glow leaves skin visibly smoother, moisturized, and radiant —
+            from the very first use. No greasy feel. Just pure glow.
+          </p>
+
+          <ul class="showcase__checklist">
+            <li><span>✓</span> Nourishing — feeds skin with rare botanicals</li>
+            <li><span>✓</span> Smoothing — visibly silkier texture in 7 days</li>
+            <li><span>✓</span> Moisturizing — 24-hour deep hydration lock</li>
+            <li><span>✓</span> Golden glow — light-reflective actives</li>
+            <li><span>✓</span> Clean formula — vegan & cruelty-free</li>
+          </ul>
+
+          <div class="showcase__meta-row">
+            <span class="showcase__size-tag">1.69 fl.oz · 50 ml</span>
+            <span class="showcase__clean-tag">🌿 Vegan · Cruelty-Free</span>
+          </div>
+
+          <div class="showcase__buy">
+            <span class="showcase__price">$68</span>
+            <div class="showcase__qty-wrap">
+              <button class="qty-btn" id="showcaseQtyDec" aria-label="Decrease">−</button>
+              <span class="qty-val" id="showcaseQtyVal">1</span>
+              <button class="qty-btn" id="showcaseQtyInc" aria-label="Increase">+</button>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--full showcase__cta" id="showcaseAddToCart" data-product-id="softglow">
+            Add to Cart — $68
+          </button>
+
+          <div class="showcase__trust">
+            <div class="trust-item">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M6 7V5a4 4 0 018 0v2"/></svg>
+              <span>Free shipping over $60</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              <span>30-day glow guarantee</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <span>Dermatologist tested</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW TO USE ── -->
+  <section class="how-to" id="how-to">
+    <div class="container">
+      <div class="how-to__inner">
+        <div class="how-to__text reveal">
+          <span class="section-tag">Ritual</span>
+          <h2 class="section-title">The KALISA<br /><em>Daily Ritual</em></h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step__num">01</div>
+              <div class="step__content">
+                <h4>Cleanse</h4>
+                <p>Begin with clean, slightly damp skin right after your shower for optimal absorption.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">02</div>
+              <div class="step__content">
+                <h4>Warm</h4>
+                <p>Pour 3–5 drops into your palms and gently warm the oil between your hands.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">03</div>
+              <div class="step__content">
+                <h4>Massage</h4>
+                <p>Apply using upward strokes. Massage in circular motions for 60 seconds.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">04</div>
+              <div class="step__content">
+                <h4>Radiate</h4>
+                <p>Allow 2 minutes to absorb. No rinse needed — just glowing, silky skin.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="how-to__visual reveal reveal--right">
+          <div class="ritual-card">
+            <div class="ritual-card__bg"></div>
+            <div class="ritual-card__content">
+              <div class="ritual-icon">
+                <svg viewBox="0 0 80 80" fill="none">
+                  <circle cx="40" cy="40" r="36" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+                  <circle cx="40" cy="40" r="26" stroke="rgba(212,175,55,0.3)" stroke-width="1"/>
+                  <path d="M40 16C40 16 26 26 26 40C26 51.046 32.954 58 40 58C47.046 58 54 51.046 54 40C54 26 40 16 40 16Z" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
+                  <path d="M40 58V44M40 44C40 44 34 36 34 32M40 44C40 44 46 36 46 32" stroke="rgba(212,175,55,0.8)" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <p class="ritual-card__quote">"In just one week, my skin has never felt so soft. It absorbs beautifully with no greasy feel."</p>
+              <span class="ritual-card__author">— Sofia A., Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INGREDIENTS ── -->
+  <section class="ingredients" id="ingredients">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Formulation</span>
+        <h2 class="section-title">Nature's Finest<br /><em>Ingredients</em></h2>
+        <p class="section-sub">Every drop contains the purest botanical extracts, ethically sourced from around the world.</p>
+      </div>
+      <div class="ingredients__grid">
+        <div class="ingredient reveal">
+          <div class="ingredient__icon" style="--clr: #e8a87c">🌹</div>
+          <h4>Rosehip Seed Oil</h4>
+          <p>Morocco · Rich in Vitamin C & A, fades scars and evens skin tone naturally.</p>
+        </div>
+        <div class="ingredient reveal">
+          <div class="ingredient__icon" style="--clr: #d4af37">✨</div>
+          <h4>Argan Oil</h4>
+          <p>Morocco · "Liquid Gold" — intensely moisturizing, softens and adds shine.</p>
+        </div>
+        <div class="ingredient reveal">
+          <div class="ingredient__icon" style="--clr: #8fbc8f">🌿</div>
+          <h4>Bakuchiol</h4>
+          <p>India · Natural retinol alternative. Firms skin without irritation or sensitivity.</p>
+        </div>
+        <div class="ingredient reveal">
+          <div class="ingredient__icon" style="--clr: #ffd700">🌻</div>
+          <h4>Sea Buckthorn</h4>
+          <p>Himalayas · Loaded with Omega-7, accelerates skin repair and adds radiance.</p>
+        </div>
+        <div class="ingredient reveal">
+          <div class="ingredient__icon" style="--clr: #c9b8d0">💜</div>
+          <h4>Squalane</h4>
+          <p>Sugarcane · Ultra-lightweight emollient. Locks moisture in without clogging pores.</p>
+        </div>
+        <div class="ingredient reveal">
+          <div class="ingredient__icon" style="--clr: #82c0cc">💧</div>
+          <h4>Jojoba Oil</h4>
+          <p>Arizona · Mimics skin's natural sebum. Balances oil production for all types.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ── -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">Loved by<br /><em>Thousands</em></h2>
+        <div class="reviews__overall">
+          <span class="rating-big">4.9</span>
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <span>Based on 461 reviews</span>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__slider" id="reviewsSlider">
+        <div class="review-card reveal">
+          <div class="review-card__stars">★★★★★</div>
+          <p>"I've tried dozens of body oils and nothing compares. My skin looks like glass — genuinely obsessed with this product."</p>
+          <div class="review-card__author">
+            <div class="author-avatar" style="--hue: 30">E</div>
+            <div>
+              <strong>Emma R.</strong>
+              <span>Verified · Soft Glow Body Oil</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-card__stars">★★★★★</div>
+          <p>"The scent alone is worth every penny. It's like a spa in a bottle. My dry skin has completely transformed in 3 weeks."</p>
+          <div class="review-card__author">
+            <div class="author-avatar" style="--hue: 200">M</div>
+            <div>
+              <strong>Maya K.</strong>
+              <span>Verified · Soft Glow Body Oil</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-card__stars">★★★★★</div>
+          <p>"As someone with sensitive skin I'm always cautious. This is gentle, effective and gives the most beautiful glow."</p>
+          <div class="review-card__author">
+            <div class="author-avatar" style="--hue: 150">S</div>
+            <div>
+              <strong>Sarah L.</strong>
+              <span>Verified · Soft Glow Body Oil</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-card__stars">★★★★★</div>
+          <p>"A birthday gift that became a daily non-negotiable. I buy it for all my friends now. The packaging is stunning too!"</p>
+          <div class="review-card__author">
+            <div class="author-avatar" style="--hue: 300">J</div>
+            <div>
+              <strong>Jasmine T.</strong>
+              <span>Verified · Soft Glow Body Oil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="cta">
+    <div class="cta__bg"></div>
+    <div class="container">
+      <div class="cta__inner reveal">
+        <span class="section-tag">Limited Offer</span>
+        <h2 class="cta__title">Try Soft Glow<br /><em>Risk-Free Today</em></h2>
+        <p>Free shipping on orders over $60 · 30-day glow guarantee · Gift wrapping available</p>
+        <a href="#products" class="btn btn--white btn--large">Shop Soft Glow — $68</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">KALISA</a>
+          <p>Makers of the Soft Glow Body Oil — a luxury botanical formula for those who believe beauty should be pure, honest, and radiant.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12C9 14.761 11.239 17 14 17C16.761 17 19 14.761 19 12V4C19.667 5.333 21 6.4 22 7"/><path d="M9 12V6"/><circle cx="9" cy="15" r="3"/></svg>
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12C2 16.236 4.636 19.852 8.356 21.337C8.275 20.602 8.2 19.459 8.394 18.646L9.95 11.995C9.95 11.995 9.5 11.095 9.5 9.745C9.5 7.622 10.726 6.034 12.244 6.034C13.544 6.034 14.175 7.007 14.175 8.177C14.175 9.481 13.345 11.44 12.916 13.258C12.556 14.78 13.676 16.025 15.177 16.025C17.9 16.025 19.956 13.066 19.956 8.852C19.956 5.12 17.296 2.518 13.485 2.518C9.085 2.518 6.5 5.83 6.5 9.249C6.5 10.551 6.987 11.95 7.607 12.723C7.727 12.869 7.744 12.997 7.71 13.147L7.264 14.958C7.2 15.228 7.05 15.286 6.771 15.153C4.864 14.266 3.667 11.423 3.667 9.165C3.667 4.577 7.016 0.371 14.012 0.371C19.648 0.371 24 4.34 24 9.831C24 15.555 20.437 20.149 15.407 20.149C13.858 20.149 12.4 19.338 11.9 18.384L11.044 21.693C10.734 22.851 9.925 24.309 9.377 25.188C10.228 25.448 11.098 25.582 12 25.582C18.627 25.582 24 20.209 24 13.582"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h5>Shop</h5>
+          <ul>
+            <li><a href="#products">Soft Glow Body Oil</a></li>
+            <li><a href="#products">Gift Sets</a></li>
+            <li><a href="#products">Bundle & Save</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Help</h5>
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Track My Order</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Newsletter</h5>
+          <p>Join 50,000+ glow-getters for exclusive offers.</p>
+          <form class="footer__form" onsubmit="return false">
+            <input type="email" placeholder="your@email.com" />
+            <button type="submit" class="btn btn--primary">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 KALISA. All rights reserved.</p>
+        <div class="footer__links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── CART DRAWER ── -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-drawer__header">
+      <h3>Your Cart</h3>
+      <button class="cart-drawer__close" id="cartClose" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-drawer__items" id="cartItems"></div>
+    <div class="cart-drawer__footer" id="cartFooter"></div>
+  </aside>
+
+  <!-- ── LOGIN MODAL ── -->
+  <div class="modal-overlay" id="loginOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Account">
+      <button class="modal__close" id="loginClose" aria-label="Close">×</button>
+      <div class="modal__logo">KALISA</div>
+      <div class="modal__tabs">
+        <button class="modal__tab active" data-tab="signin">Sign In</button>
+        <button class="modal__tab" data-tab="signup">Create Account</button>
+      </div>
+
+      <form class="modal__form" id="signinForm">
+        <div class="form-group">
+          <label for="signinEmail">Email</label>
+          <input type="email" id="signinEmail" placeholder="your@email.com" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label for="signinPassword">Password</label>
+          <input type="password" id="signinPassword" placeholder="••••••••" autocomplete="current-password" required />
+        </div>
+        <p class="form-error" id="signinError"></p>
+        <button type="submit" class="btn btn--primary btn--full">Sign In</button>
+      </form>
+
+      <form class="modal__form hidden" id="signupForm">
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="Your name" autocomplete="name" required />
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" placeholder="your@email.com" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="Min. 6 characters" autocomplete="new-password" required />
+        </div>
+        <p class="form-error" id="signupError"></p>
+        <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ── TOAST CONTAINER ── -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
